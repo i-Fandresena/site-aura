@@ -69,7 +69,6 @@ export function Hero({ lenisRef }: { lenisRef: RefObject<Lenis | null> }) {
             data-reveal
             className="mt-8 inline-flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan-soft px-4 py-2 font-mono text-[11px] tracking-[0.1em] text-cyan"
           >
-            <span className="size-1.5 rounded-full bg-cyan animate-pulse-glow" />
             {t.hero.guideIntro}
           </div>
 

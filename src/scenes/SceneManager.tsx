@@ -1,7 +1,6 @@
 import { Suspense, useRef, type ReactNode } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import type { Group } from "three";
-import { ParticleField } from "@/components/3d/ParticleField";
 import { CameraRig } from "@/components/3d/CameraRig";
 import { SceneEnvironment } from "@/components/3d/SceneEnvironment";
 import { Avatar } from "@/components/3d/Avatar";
@@ -95,7 +94,7 @@ function SceneContent({
           <ImageLandmark
             url="/3D/zenitsu.png"
             sceneIndex={0}
-            position={[2.2, -1.1, 0]}
+            position={[2.2, -0.8, 0]}
             targetWidth={3.5}
             maxOpacity={0.95}
             falloff={1.4}
@@ -224,14 +223,6 @@ function SceneContent({
       <SceneGroup sceneIndex={9} position={SCENE_ANCHORS.contact}>
         <pointLight position={[0, 1, 3]} intensity={9} distance={12} color={signal} />
       </SceneGroup>
-
-      <ParticleField
-        color={CYAN}
-        reducedMotion={reducedMotion}
-        count={lowPower ? 550 : 1400}
-        depth={148}
-        spread={16}
-      />
 
       <PostFX enabled={!lowPower} isDark={isDark} />
     </>

@@ -1,9 +1,10 @@
-import { GraduationCap, Server, Sparkles } from "lucide-react";
+import { GraduationCap, Server } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { GlassPanel, SectionLabel, StatusTag, TechBadge } from "@/components/aura/primitives";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { GeminiIcon } from "@/components/aura/GeminiIcon";
 
-const ICONS: LucideIcon[] = [GraduationCap, Server, Sparkles];
+const ICONS = [GraduationCap, Server, GeminiIcon] as Array<React.FC<{ className?: string }>>;
 
 export function Team() {
   const { t } = useLanguage();

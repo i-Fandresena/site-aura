@@ -87,17 +87,11 @@ export function StatusTag({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.2em] uppercase",
+        "inline-flex items-center font-mono text-[10px] tracking-[0.2em] uppercase",
         tone === "cyan" ? "text-cyan" : "text-signal",
         className,
       )}
     >
-      <span
-        className={cn(
-          "size-1.5 rounded-full animate-pulse-glow",
-          tone === "cyan" ? "bg-cyan" : "bg-signal",
-        )}
-      />
       {label}
     </span>
   );

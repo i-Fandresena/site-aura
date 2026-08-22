@@ -1,9 +1,10 @@
-import { Coffee, Sparkles, Shuffle } from "lucide-react";
+import { Coffee, Shuffle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { GlassPanel, SectionLabel } from "@/components/aura/primitives";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { GeminiIcon } from "@/components/aura/GeminiIcon";
 
-const ICONS: LucideIcon[] = [Sparkles, Coffee, Shuffle];
+const ICONS = [GeminiIcon, Coffee, Shuffle] as Array<React.FC<{ className?: string }>>;
 
 export function Sanctuary() {
   const { t } = useLanguage();

@@ -115,6 +115,11 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => { try { document.querySelectorAll('[bis_skin_checked]').forEach(el => el.removeAttribute('bis_skin_checked')); } catch (e) {} })();`,
+          }}
+        />
       </head>
       <body>
         {children}

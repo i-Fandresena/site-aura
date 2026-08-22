@@ -44,8 +44,6 @@ export function Avatar({
   }, [scene, holo]);
 
   useFrame((state, delta) => {
-    holo.uniforms.uHoloTime.value = state.clock.elapsedTime;
-
     if (!group.current || reducedMotion) return;
 
     const targetY = hovered ? 0.15 : 0;

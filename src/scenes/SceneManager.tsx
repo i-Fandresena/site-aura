@@ -97,8 +97,8 @@ function SceneContent({
             color={signal}
             isDark={isDark}
             reducedMotion={reducedMotion}
-            position={[1.9, -1.28, 0]}
-            targetHeight={2.15}
+            position={[1.5, -1.2, 0]}
+            targetHeight={2.0}
           />
         </Suspense>
       </SceneGroup>

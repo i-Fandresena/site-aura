@@ -93,7 +93,7 @@ function SceneContent({
         <pointLight position={[0.2, 0.5, 1.5]} intensity={5} distance={10} color={CYAN} />
         <Suspense fallback={null}>
           <ImageLandmark
-            url="/3D/zenitsu.jpeg"
+            url="/3D/zenitsu.png"
             sceneIndex={0}
             position={[2.2, -1.1, 0]}
             targetWidth={3.5}

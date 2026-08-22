@@ -98,7 +98,7 @@ function SceneContent({
             isDark={isDark}
             reducedMotion={reducedMotion}
             holo={false}
-            baseRotation={[-0.6, 0.55, 0.2]}
+            baseRotation={[-0.8, 0.6, 0.25]}
             position={[1.6, -1.1, 0]}
             targetHeight={2.0}
           />

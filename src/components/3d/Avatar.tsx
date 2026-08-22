@@ -54,7 +54,10 @@ export function Avatar({
   useFrame((state, delta) => {
     if (!group.current || reducedMotion) return;
 
-    const targetY = hovered ? 0.15 : 0;
+    group.current.rotation.x = baseRotation[0];
+    group.current.rotation.z = baseRotation[2];
+
+    const targetY = hovered ? 0.15 : baseRotation[1];
     const lerp = Math.min(delta * 2.5, 1);
     group.current.rotation.y = MathUtils.lerp(group.current.rotation.y, targetY, lerp);
 
@@ -66,7 +69,6 @@ export function Avatar({
     <group
       ref={group}
       position={position}
-      rotation={baseRotation}
       onPointerOver={(e) => {
         e.stopPropagation();
         setHovered(true);

@@ -99,7 +99,7 @@ function SceneContent({
             reducedMotion={reducedMotion}
             holo={false}
             baseRotation={[-0.25, 0.45, 0.1]}
-            position={[1.2, -1.1, 0]}
+            position={[0.8, -1.0, 0]}
             targetHeight={2.0}
           />
         </Suspense>

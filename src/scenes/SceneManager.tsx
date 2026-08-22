@@ -253,9 +253,7 @@ export function SceneManager() {
       gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
       camera={{ position: [0.6, 0.25, 5.6], fov: 42, far: 600 }}
     >
-      <Suspense fallback={null}>
-        <SceneContent isDark={isDark} reducedMotion={reducedMotion} lowPower={lowPower} />
-      </Suspense>
+      <SceneContent isDark={isDark} reducedMotion={reducedMotion} lowPower={lowPower} />
     </Canvas>
   );
 }

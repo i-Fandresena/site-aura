@@ -20,6 +20,7 @@ export function Avatar({
   targetHeight?: number;
 }) {
   const group = useRef<Group>(null);
+  const [hovered, setHovered] = useState(false);
   const { scene } = useGLTF(url);
 
   const holo = useMemo(() => createHologramMaterial({ color, isDark }), [color, isDark]);

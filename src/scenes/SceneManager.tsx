@@ -94,7 +94,7 @@ function SceneContent({
           <ImageLandmark
             url="/3D/mascot.png"
             sceneIndex={0}
-            position={[2.2, -0.8, 0]}
+            position={[2.6, -0.6, 0]}
             targetWidth={3.5}
             maxOpacity={0.95}
             falloff={1.4}

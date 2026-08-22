@@ -23,6 +23,7 @@ npm run optimize-assets
 ```
 
 Ce script :
+
 - Redimensionne les images > 50 KB à 1024 px maximum (coté le plus long)
 - Convertit les JPG en JPEG progressif (qualité 80%)
 - Optimise les PNG (compression maximale)
@@ -35,21 +36,27 @@ Les originaux ne sont pas sauvegardés automatiquement. Si besoin, sauvegardez `
 Les fichiers `.glb` dans `public/3D/` sont les plus gros goulots d'étranglement. Voici comment les optimiser :
 
 ### a) Réduction de polygones
+
 Ouvrez le modèle dans Blender et appliquez un modifier **Decimate** pour réduire le nombre de faces. Visez < 50 000 triangles pour les props de scène.
 
 ### b) Compression de géométrie (Draco)
+
 ```bash
 npm run optimize-3d
 ```
+
 (Ce script utilise `@gltf-transform/cli`. En cas d'erreur `colourspace: parameter space not set` sur Windows, utilisez la version desktop de gltf-transform ou un service en ligne.)
 
 ### c) Compression de textures
+
 Utilisez [gltf.report](https://gltf.report/) pour :
+
 - Réencoder les textures en WebP/AVIF
 - Réduire leur résolution à 1024 px ou 2048 px
 - Générer des KTX2 avec Basis Universal pour un chargement GPU direct
 
 ### d) Remplacement du modèle le plus lourd
+
 `city_for_my_game.glb` fait 88 MB. C'est normalement lazy-loadé, mais c'est quand même très lourd. Si la scène Le Noyau peut utiliser une version simplifiée, remplacez simplement le fichier dans `public/3D/`.
 
 ## 6. Bonnes pratiques

@@ -8,6 +8,7 @@ import { Avatar } from "@/components/3d/Avatar";
 import { LittlePlanet } from "@/components/3d/LittlePlanet";
 import { AlienSkybox } from "@/components/3d/AlienSkybox";
 import { WorldProp } from "@/components/3d/WorldProp";
+import { ImageLandmark } from "@/components/3d/ImageLandmark";
 import { PostFX } from "@/components/3d/PostFX";
 import { SCENE_ANCHORS } from "@/config/scenes";
 import { computeSceneFocus } from "@/hooks/useSceneProgress";
@@ -190,13 +191,12 @@ function SceneContent({
       <SceneGroup sceneIndex={7} position={SCENE_ANCHORS.team} falloff={1.5}>
         <pointLight position={[2, 2, 3]} intensity={10} distance={14} color={signal} />
         <LazyLandmark sceneIndex={7} margin={4}>
-          <WorldProp
-            url="/3D/city_for_my_game.glb"
+          <ImageLandmark
+            url="/3D/team-landmark.jpg"
             sceneIndex={7}
             position={[0.2, -1.4, -3.5]}
             targetWidth={12}
             maxOpacity={isDark ? 0.9 : 1}
-            envMapIntensity={isDark ? 0.7 : 0.3}
             falloff={1.5}
             spinSpeed={0.002}
           />

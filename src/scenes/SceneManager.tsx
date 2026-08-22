@@ -92,15 +92,13 @@ function SceneContent({
         <pointLight position={[3.2, 2, 2.5]} intensity={9} distance={12} color={signal} />
         <pointLight position={[0.2, 0.5, 1.5]} intensity={5} distance={10} color={CYAN} />
         <Suspense fallback={null}>
-          <Avatar
-            url="/3D/team-mascot.glb"
-            color={signal}
-            isDark={isDark}
-            reducedMotion={reducedMotion}
-            holo={false}
-            baseRotation={[0.8, 1.2, 0.25]}
-            position={[1.6, -1.1, 0]}
-            targetHeight={2.0}
+          <ImageLandmark
+            url="/3D/zenitsu.jpeg"
+            sceneIndex={0}
+            position={[2.2, -1.1, 0]}
+            targetWidth={3.5}
+            maxOpacity={0.95}
+            falloff={1.4}
           />
         </Suspense>
       </SceneGroup>

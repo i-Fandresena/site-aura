@@ -11,6 +11,8 @@ export function Avatar({
   reducedMotion,
   position = [0, -1.15, 0],
   targetHeight = 2.4,
+  holo = true,
+  baseRotation = [0, 0, 0],
 }: {
   url: string;
   color: string;
@@ -18,12 +20,17 @@ export function Avatar({
   reducedMotion: boolean;
   position?: [number, number, number];
   targetHeight?: number;
+  holo?: boolean;
+  baseRotation?: [number, number, number];
 }) {
   const group = useRef<Group>(null);
   const [hovered, setHovered] = useState(false);
   const { scene } = useGLTF(url);
 
-  const holo = useMemo(() => createHologramMaterial({ color, isDark }), [color, isDark]);
+  const holoMaterial = useMemo(
+    () => (holo ? createHologramMaterial({ color, isDark }) : null),
+    [color, isDark, holo],
+  );
 
   const fit = useMemo(() => {
     const box = new Box3().setFromObject(scene);
@@ -33,15 +40,16 @@ export function Avatar({
   }, [scene, targetHeight]);
 
   useEffect(() => {
+    if (!holo || !holoMaterial) return;
     scene.traverse((child) => {
       if (child instanceof Mesh) {
-        child.material = holo.material;
+        child.material = holoMaterial.material;
         child.castShadow = false;
         child.receiveShadow = false;
       }
     });
-    return () => holo.material.dispose();
-  }, [scene, holo]);
+    return () => holoMaterial.material.dispose();
+  }, [scene, holoMaterial, holo]);
 
   useFrame((state, delta) => {
     if (!group.current || reducedMotion) return;
@@ -58,6 +66,7 @@ export function Avatar({
     <group
       ref={group}
       position={position}
+      rotation={baseRotation}
       onPointerOver={(e) => {
         e.stopPropagation();
         setHovered(true);

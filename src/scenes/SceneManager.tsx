@@ -97,7 +97,9 @@ function SceneContent({
             color={signal}
             isDark={isDark}
             reducedMotion={reducedMotion}
-            position={[1.5, -1.2, 0]}
+            holo={false}
+            baseRotation={[-0.25, 0.45, 0.1]}
+            position={[1.2, -1.1, 0]}
             targetHeight={2.0}
           />
         </Suspense>

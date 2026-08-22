@@ -15,6 +15,7 @@ import { useLazyMount } from "@/hooks/useLazyMount";
 import { useAuraTheme } from "@/hooks/useAuraTheme";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useLowPowerDevice } from "@/hooks/useLowPowerDevice";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SIGNAL_LIGHT = "#0052FF";
 // Nebula violet — matches --signal's new oklch(0.66 0.24 292) in styles.css.
@@ -73,13 +74,18 @@ function SceneContent({
   isDark,
   reducedMotion,
   lowPower,
+  isMobile,
 }: {
   isDark: boolean;
   reducedMotion: boolean;
   lowPower: boolean;
+  isMobile: boolean;
 }) {
   const signal = isDark ? SIGNAL_DARK : SIGNAL_LIGHT;
   const background = isDark ? BACKGROUND_DARK : BACKGROUND_LIGHT;
+
+  const heroImagePosition: [number, number, number] = isMobile ? [1.8, -0.5, 0] : [2.6, -0.6, 0];
+  const heroImageWidth = isMobile ? 2.8 : 3.5;
 
   return (
     <>
@@ -94,8 +100,8 @@ function SceneContent({
           <ImageLandmark
             url="/3D/mascot.png"
             sceneIndex={0}
-            position={[2.6, -0.6, 0]}
-            targetWidth={3.5}
+            position={heroImagePosition}
+            targetWidth={heroImageWidth}
             maxOpacity={0.95}
             falloff={1.4}
           />
@@ -237,6 +243,7 @@ export function SceneManager() {
   const isDark = useAuraTheme();
   const reducedMotion = useReducedMotion();
   const lowPower = useLowPowerDevice();
+  const isMobile = useIsMobile();
 
   return (
     <Canvas
@@ -244,7 +251,12 @@ export function SceneManager() {
       gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
       camera={{ position: [0.6, 0.25, 5.6], fov: 42, far: 600 }}
     >
-      <SceneContent isDark={isDark} reducedMotion={reducedMotion} lowPower={lowPower} />
+      <SceneContent
+        isDark={isDark}
+        reducedMotion={reducedMotion}
+        lowPower={lowPower}
+        isMobile={isMobile}
+      />
     </Canvas>
   );
 }

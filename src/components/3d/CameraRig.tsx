@@ -3,15 +3,14 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { MathUtils, Vector3, type PerspectiveCamera } from "three";
 import { SCENES } from "@/config/scenes";
 import { getSceneProgressSnapshot } from "@/hooks/useSceneProgress";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-/**
- * Scroll-driven cinematic camera. Lerps position, aim point and FOV between
- * scene keyframes, then layers a small mouse-parallax offset on top so the
- * environment feels alive even when the scroll is still.
- */
 export function CameraRig({ reducedMotion }: { reducedMotion: boolean }) {
   const { camera } = useThree();
+  const isMobile = useIsMobile();
   const pointer = useRef({ x: 0, y: 0 });
+
+  const mobileFovOffset = isMobile ? 8 : 0;
 
   const smoothedPosition = useRef(new Vector3(...SCENES[0]!.cameraPosition));
   const smoothedTarget = useRef(new Vector3(...SCENES[0]!.lookAt));
@@ -43,7 +42,7 @@ export function CameraRig({ reducedMotion }: { reducedMotion: boolean }) {
       MathUtils.lerp(from.lookAt[1], to.lookAt[1], sceneBlend),
       MathUtils.lerp(from.lookAt[2], to.lookAt[2], sceneBlend),
     );
-    const fov = MathUtils.lerp(from.fov, to.fov, sceneBlend);
+    const fov = MathUtils.lerp(from.fov, to.fov, sceneBlend) + mobileFovOffset;
 
     const smoothing = reducedMotion ? 1 : Math.min(delta * 2.2, 1);
     smoothedPosition.current.lerp(targetPosition.current, smoothing);

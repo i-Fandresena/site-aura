@@ -44,7 +44,7 @@ export function HudNav({ lenisRef }: { lenisRef: RefObject<Lenis | null> }) {
             </span>
           </button>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <StatusTag
               label={isDark ? t.nav.nightJourney : t.nav.dayJourney}
               className="hidden rounded-full border border-hairline bg-glass px-3 py-2 backdrop-blur-md md:inline-flex"
@@ -54,7 +54,7 @@ export function HudNav({ lenisRef }: { lenisRef: RefObject<Lenis | null> }) {
             <button
               aria-label="Toggle navigation"
               onClick={() => setOpen((v) => !v)}
-              className="text-foreground/80 transition-colors hover:text-signal"
+              className="flex size-11 items-center justify-center rounded-full text-foreground/80 transition-colors hover:text-signal active:scale-95"
             >
               {open ? <X className="size-5" /> : <Menu className="size-5" />}
             </button>
@@ -64,14 +64,16 @@ export function HudNav({ lenisRef }: { lenisRef: RefObject<Lenis | null> }) {
 
       {open && (
         <div className="glass-panel rounded-none border-x-0">
-          <nav className="mx-auto grid max-w-[1400px] grid-cols-2 gap-4 px-5 py-5 sm:grid-cols-3 lg:grid-cols-5">
+          <nav className="mx-auto grid max-w-[1400px] grid-cols-2 gap-3 px-5 py-6 sm:grid-cols-3 lg:grid-cols-5">
             {SCENES.map((scene) => (
               <button
                 key={scene.id}
                 onClick={() => goTo(scene.id)}
                 className={cn(
-                  "text-left font-mono text-xs tracking-[0.18em]",
-                  activeIndex === scene.index ? "text-signal" : "text-muted-foreground",
+                  "text-left font-mono text-sm tracking-[0.18em] py-3 px-4 rounded-xl border border-hairline bg-background/50 backdrop-blur-sm transition-all active:scale-95",
+                  activeIndex === scene.index
+                    ? "text-signal border-signal/30 bg-signal-soft"
+                    : "text-muted-foreground hover:text-foreground hover:border-signal/20",
                 )}
               >
                 {`0${scene.index + 1} · ${t.nav[scene.id]}`}

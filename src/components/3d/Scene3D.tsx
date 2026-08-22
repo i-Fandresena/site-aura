@@ -21,7 +21,18 @@ export function Scene3D({ className }: { className?: string }) {
     };
   }, []);
 
-  if (!loaded) return null;
+  if (!loaded) {
+    return (
+      <div className={className}>
+        <div className="flex size-full items-center justify-center">
+          <div className="relative size-10">
+            <div className="absolute inset-0 rounded-full border-2 border-hairline" />
+            <div className="absolute inset-0 rounded-full border-2 border-signal border-t-transparent animate-spin" />
+          </div>
+        </div>
+      </div>
+    );
+  }
   const { Comp } = loaded;
   // R3F's <Canvas> sets position/width/height via inline style, which would
   // win over Tailwind classes for those properties — so the fixed/absolute

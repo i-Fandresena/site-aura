@@ -8,15 +8,15 @@ La vidéo de référence n'est PAS une simple inspiration esthétique.
 
 Elle constitue la référence principale pour :
 
-* la structure de navigation ;
-* les transitions ;
-* le rythme ;
-* le comportement de la caméra ;
-* la profondeur 3D ;
-* la composition visuelle ;
-* les animations ;
-* la relation entre le contenu HTML et le canvas 3D ;
-* la manière dont les différentes sections sont révélées.
+- la structure de navigation ;
+- les transitions ;
+- le rythme ;
+- le comportement de la caméra ;
+- la profondeur 3D ;
+- la composition visuelle ;
+- les animations ;
+- la relation entre le contenu HTML et le canvas 3D ;
+- la manière dont les différentes sections sont révélées.
 
 Le résultat final doit donner l'impression que l'utilisateur **navigue dans un univers numérique 3D**, et non qu'il visite un site web traditionnel.
 
@@ -24,12 +24,12 @@ Le résultat final doit donner l'impression que l'utilisateur **navigue dans un 
 
 NE PAS créer :
 
-* une landing page classique ;
-* une grille de cartes avec quelques effets 3D ;
-* un dashboard SaaS ;
-* un site avec simplement un background animé ;
-* des sections statiques séparées ;
-* des animations génériques de type Framer Motion.
+- une landing page classique ;
+- une grille de cartes avec quelques effets 3D ;
+- un dashboard SaaS ;
+- un site avec simplement un background animé ;
+- des sections statiques séparées ;
+- des animations génériques de type Framer Motion.
 
 Créer à la place :
 
@@ -45,19 +45,19 @@ La vidéo de référence doit être considérée comme le storyboard principal.
 
 Elle présente une interface futuriste extrêmement sombre avec :
 
-* noir profond ;
-* rouge incandescent ;
-* orange énergétique ;
-* surfaces métalliques ;
-* verre sombre ;
-* lumière volumétrique ;
-* bloom ;
-* particules ;
-* structures géométriques ;
-* interfaces HUD ;
-* éléments 3D industriels ;
-* architecture numérique ;
-* profondeur cinématique.
+- noir profond ;
+- rouge incandescent ;
+- orange énergétique ;
+- surfaces métalliques ;
+- verre sombre ;
+- lumière volumétrique ;
+- bloom ;
+- particules ;
+- structures géométriques ;
+- interfaces HUD ;
+- éléments 3D industriels ;
+- architecture numérique ;
+- profondeur cinématique.
 
 Pour AURA++, conserver cette logique mais adapter complètement l'identité graphique à AURA++.
 
@@ -65,13 +65,13 @@ Pour AURA++, conserver cette logique mais adapter complètement l'identité grap
 
 Utiliser principalement :
 
-* #050507 — noir profond
-* #080B12 — noir bleuté
-* bleu électrique
-* violet électrique
-* amber/orange AURA++
-* blanc froid
-* gris métallique
+- #050507 — noir profond
+- #080B12 — noir bleuté
+- bleu électrique
+- violet électrique
+- amber/orange AURA++
+- blanc froid
+- gris métallique
 
 Le rouge/orange dominant de la vidéo doit être remplacé principalement par le langage visuel AURA++ :
 
@@ -87,15 +87,15 @@ Le projet doit utiliser une architecture moderne et performante.
 
 Priorité :
 
-* React
-* TypeScript
-* Three.js
-* React Three Fiber
-* @react-three/drei
-* Framer Motion ou GSAP pour les animations DOM
-* éventuellement GSAP ScrollTrigger
-* Lenis pour le smooth scrolling
-* postprocessing pour Bloom / vignette / aberration chromatique si nécessaire
+- React
+- TypeScript
+- Three.js
+- React Three Fiber
+- @react-three/drei
+- Framer Motion ou GSAP pour les animations DOM
+- éventuellement GSAP ScrollTrigger
+- Lenis pour le smooth scrolling
+- postprocessing pour Bloom / vignette / aberration chromatique si nécessaire
 
 Le canvas doit rester performant.
 
@@ -105,7 +105,7 @@ Utiliser idéalement :
 
 ```tsx
 <Canvas>
-   <Scene />
+  <Scene />
 </Canvas>
 ```
 
@@ -179,27 +179,27 @@ un objet 3D AURA++ flottant.
 
 L'objet peut être :
 
-* un symbole AURA++ ;
-* une structure triangulaire ;
-* un artefact technologique ;
-* une géométrie métallique complexe.
+- un symbole AURA++ ;
+- une structure triangulaire ;
+- un artefact technologique ;
+- une géométrie métallique complexe.
 
 Il doit avoir :
 
-* métal sombre ;
-* verre ;
-* lignes lumineuses ;
-* énergie interne ;
-* petits détails mécaniques ;
-* reflets réalistes.
+- métal sombre ;
+- verre ;
+- lignes lumineuses ;
+- énergie interne ;
+- petits détails mécaniques ;
+- reflets réalistes.
 
 Autour :
 
-* anneaux orbitaux ;
-* particules ;
-* petites sphères ;
-* fragments géométriques ;
-* très légère poussière volumétrique.
+- anneaux orbitaux ;
+- particules ;
+- petites sphères ;
+- fragments géométriques ;
+- très légère poussière volumétrique.
 
 Le logo AURA++ peut être utilisé comme point focal.
 
@@ -213,14 +213,14 @@ Elle ne doit jamais être complètement statique.
 
 Créer une caméra cinématique capable de :
 
-* avancer ;
-* reculer ;
-* tourner ;
-* effectuer de légères rotations ;
-* changer de hauteur ;
-* effectuer des dolly shots ;
-* effectuer des rotations autour d'objets ;
-* traverser certains environnements.
+- avancer ;
+- reculer ;
+- tourner ;
+- effectuer de légères rotations ;
+- changer de hauteur ;
+- effectuer des dolly shots ;
+- effectuer des rotations autour d'objets ;
+- traverser certains environnements.
 
 Le mouvement doit être lent, fluide et intentionnel.
 
@@ -238,13 +238,13 @@ Créer une navigation inspirée de celle visible dans la vidéo.
 
 Elle doit être :
 
-* très fine ;
-* compacte ;
-* minimaliste ;
-* semi-transparente ;
-* flottante ;
-* futuriste ;
-* discrète.
+- très fine ;
+- compacte ;
+- minimaliste ;
+- semi-transparente ;
+- flottante ;
+- futuriste ;
+- discrète.
 
 Position :
 
@@ -257,11 +257,11 @@ AURA++
 
 Utiliser :
 
-* bordures fines ;
-* glassmorphism très léger ;
-* petits pictogrammes ;
-* micro-indicateurs ;
-* état actif lumineux.
+- bordures fines ;
+- glassmorphism très léger ;
+- petits pictogrammes ;
+- micro-indicateurs ;
+- état actif lumineux.
 
 L'élément actif doit être facilement identifiable.
 
@@ -312,22 +312,22 @@ Le tout doit être fluide.
 
 Créer un environnement futuriste inspiré de :
 
-* laboratoire numérique ;
-* architecture cyberpunk ;
-* station spatiale ;
-* réseau informatique physique ;
-* ville futuriste abstraite ;
-* structures industrielles ;
-* circuits imprimés géants ;
-* monolithes ;
-* plateformes flottantes.
+- laboratoire numérique ;
+- architecture cyberpunk ;
+- station spatiale ;
+- réseau informatique physique ;
+- ville futuriste abstraite ;
+- structures industrielles ;
+- circuits imprimés géants ;
+- monolithes ;
+- plateformes flottantes.
 
 Éviter le cyberpunk cliché avec :
 
-* pluie ;
-* néons partout ;
-* panneaux japonais ;
-* voitures volantes partout.
+- pluie ;
+- néons partout ;
+- panneaux japonais ;
+- voitures volantes partout.
 
 AURA++ doit être plus premium et technologique.
 
@@ -363,12 +363,12 @@ AuraCore.tsx
 
 Caractéristiques :
 
-* géométrie complexe ;
-* métal ;
-* verre ;
-* émission lumineuse ;
-* rotation lente ;
-* particules autour.
+- géométrie complexe ;
+- métal ;
+- verre ;
+- émission lumineuse ;
+- rotation lente ;
+- particules autour.
 
 ---
 
@@ -382,10 +382,10 @@ Plateformes circulaires ou hexagonales.
 
 Avec :
 
-* métal sombre ;
-* anneaux lumineux ;
-* petits détails mécaniques ;
-* lumière bleue/amber.
+- métal sombre ;
+- anneaux lumineux ;
+- petits détails mécaniques ;
+- lumière bleue/amber.
 
 ---
 
@@ -417,10 +417,10 @@ Petits cubes holographiques.
 
 Utilisation :
 
-* décoration ;
-* navigation ;
-* transition ;
-* environnement.
+- décoration ;
+- navigation ;
+- transition ;
+- environnement.
 
 ---
 
@@ -432,10 +432,10 @@ EnergyCrystal.tsx
 
 Cristaux ou structures géométriques avec :
 
-* verre ;
-* émission ;
-* lumière interne ;
-* refraction si performant.
+- verre ;
+- émission ;
+- lumière interne ;
+- refraction si performant.
 
 ---
 
@@ -449,9 +449,9 @@ Créer un champ de particules très subtil.
 
 Les particules doivent réagir légèrement :
 
-* à la caméra ;
-* au scroll ;
-* aux transitions.
+- à la caméra ;
+- au scroll ;
+- aux transitions.
 
 ---
 
@@ -465,12 +465,12 @@ DigitalArchitecture.tsx
 
 Utiliser :
 
-* blocs ;
-* lignes lumineuses ;
-* panneaux ;
-* fenêtres ;
-* grilles ;
-* modules.
+- blocs ;
+- lignes lumineuses ;
+- panneaux ;
+- fenêtres ;
+- grilles ;
+- modules.
 
 ---
 
@@ -558,7 +558,7 @@ data-cube.glb
 Charger avec :
 
 ```tsx
-useGLTF()
+useGLTF();
 ```
 
 et mettre en cache les modèles.
@@ -601,18 +601,18 @@ emissiveIntensity
 
 avec :
 
-* blue
-* violet
-* amber
+- blue
+- violet
+- amber
 
 ### Holographic Material
 
 Pour certains éléments :
 
-* transparence ;
-* fresnel ;
-* glow ;
-* légère iridescence.
+- transparence ;
+- fresnel ;
+- glow ;
+- légère iridescence.
 
 ---
 
@@ -642,11 +642,11 @@ Les objets doivent sortir de l'obscurité progressivement.
 
 Ajouter si nécessaire :
 
-* Bloom
-* Vignette
-* Chromatic Aberration très légère
-* Noise / Film Grain très subtil
-* Depth of Field ponctuel
+- Bloom
+- Vignette
+- Chromatic Aberration très légère
+- Noise / Film Grain très subtil
+- Depth of Field ponctuel
 
 ATTENTION :
 
@@ -660,11 +660,11 @@ Le post-processing doit rester subtil.
 
 La typographie doit être :
 
-* géométrique ;
-* futuriste ;
-* très propre ;
-* fine ;
-* avec beaucoup d'espace.
+- géométrique ;
+- futuriste ;
+- très propre ;
+- fine ;
+- avec beaucoup d'espace.
 
 Titres :
 
@@ -808,10 +808,10 @@ Pour tablette/mobile :
 
 réduire :
 
-* nombre de particules ;
-* résolution du canvas ;
-* complexité des modèles ;
-* post-processing.
+- nombre de particules ;
+- résolution du canvas ;
+- complexité des modèles ;
+- post-processing.
 
 Mais conserver l'identité.
 
@@ -829,14 +829,14 @@ Objectif :
 
 Prévoir :
 
-* instancing ;
-* LOD si nécessaire ;
-* compression des textures ;
-* Draco pour les modèles GLB ;
-* lazy loading ;
-* disposal correct des ressources ;
-* limitation du DPR ;
-* réduction des particules sur mobile.
+- instancing ;
+- LOD si nécessaire ;
+- compression des textures ;
+- Draco pour les modèles GLB ;
+- lazy loading ;
+- disposal correct des ressources ;
+- limitation du DPR ;
+- réduction des particules sur mobile.
 
 Ne jamais charger 20 modèles 3D lourds immédiatement.
 
@@ -907,13 +907,7 @@ Créer un système central :
 qui connaît l'état actuel :
 
 ```ts
-type Scene =
-  | "hero"
-  | "universe"
-  | "projects"
-  | "technology"
-  | "team"
-  | "contact";
+type Scene = "hero" | "universe" | "projects" | "technology" | "team" | "contact";
 ```
 
 Chaque scène doit pouvoir contrôler :
@@ -968,14 +962,14 @@ Ne pas importer automatiquement des assets qui donnent l'impression d'un templat
 
 Éviter :
 
-* néons aléatoires ;
-* voitures cyberpunk génériques ;
-* villes cyberpunk génériques ;
-* robots génériques ;
-* HUD trop chargé ;
-* gradients excessifs ;
-* glassmorphism classique ;
-* effets de particules partout.
+- néons aléatoires ;
+- voitures cyberpunk génériques ;
+- villes cyberpunk génériques ;
+- robots génériques ;
+- HUD trop chargé ;
+- gradients excessifs ;
+- glassmorphism classique ;
+- effets de particules partout.
 
 Tout doit avoir une direction artistique cohérente AURA++.
 
@@ -1019,45 +1013,45 @@ Le livrable doit être un site AURA++ fonctionnel avec :
 
 ### Navigation
 
-* navigation HUD ;
-* état actif ;
-* navigation clavier si pertinent ;
-* navigation souris ;
-* scroll navigation.
+- navigation HUD ;
+- état actif ;
+- navigation clavier si pertinent ;
+- navigation souris ;
+- scroll navigation.
 
 ### 3D
 
-* scène Three.js persistante ;
-* objets 3D ;
-* caméra cinématique ;
-* lumière dynamique ;
-* particules ;
-* matériaux réalistes ;
-* profondeur.
+- scène Three.js persistante ;
+- objets 3D ;
+- caméra cinématique ;
+- lumière dynamique ;
+- particules ;
+- matériaux réalistes ;
+- profondeur.
 
 ### Animations
 
-* entrée ;
-* sortie ;
-* transitions ;
-* caméra ;
-* objets ;
-* lumière ;
-* texte ;
-* UI.
+- entrée ;
+- sortie ;
+- transitions ;
+- caméra ;
+- objets ;
+- lumière ;
+- texte ;
+- UI.
 
 ### Responsive
 
-* desktop ;
-* tablet ;
-* mobile.
+- desktop ;
+- tablet ;
+- mobile.
 
 ### Performance
 
-* 60 FPS desktop cible ;
-* lazy loading ;
-* optimisation des modèles ;
-* réduction automatique de qualité sur mobile.
+- 60 FPS desktop cible ;
+- lazy loading ;
+- optimisation des modèles ;
+- réduction automatique de qualité sur mobile.
 
 ---
 

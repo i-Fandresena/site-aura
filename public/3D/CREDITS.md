@@ -9,15 +9,15 @@ Every world in the AURA++ Odyssey now runs on one of these — no procedural
 placeholder geometry left in the scene. AURA-1, the guide (`RobotExpressive.glb`,
 CC0, three.js examples), is the one 3D asset that isn't a user upload.
 
-| File | World | Author | Source |
-| --- | --- | --- | --- |
-| `little_planet_earth.glb` | 02 · Le Monde-Berceau (Home World) | BlockedGravity | https://sketchfab.com/3d-models/little-planet-earth-d54bb387f62147dcbf4be0605068b1cc |
-| `landscape_of_an_alien_planet_skybox.glb` | 01 · L'Observatoire (Observatory) | Jungle Jim | https://sketchfab.com/3d-models/landscape-of-an-alien-planet-skybox-676c023d919344efbfa9876c85db7d11 |
-| `ibizone_basic_setup_vers.02.glb` | 03 · Le Sanctuaire (Sanctuary) | Miguelangelo Rosario | https://sketchfab.com/3d-models/ibizone-basic-setup-vers02-484848f1856c46cd942fd5d69489d836 |
-| `magic_book_set.glb` | 05 · Le Codex ("the grimoire of algorithms") | evildeer | https://sketchfab.com/3d-models/magic-book-set-ee1747b4d426446ba5f14bcf2aec8400 |
-| `cyberpunk_city_-_1.glb` | 06 · Mission Control, heavily desaturated | born2012 | https://sketchfab.com/3d-models/cyberpunk-city-1-14d2eaa145ee42938e004115871adf6c |
-| `city_for_my_game.glb` | 07 · Le Noyau (the operators' own home base) | abhayexe | https://sketchfab.com/3d-models/city-for-my-game-27f61ca204944810895609a061b9643f |
-| `city_at_night.glb` | 08 · L'Avant-Poste (Outpost) | Katydid | https://sketchfab.com/3d-models/city-at-night-45b227092fbe42edad4162d5eff5dc65 |
+| File                                      | World                                        | Author               | Source                                                                                               |
+| ----------------------------------------- | -------------------------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| `little_planet_earth.glb`                 | 02 · Le Monde-Berceau (Home World)           | BlockedGravity       | https://sketchfab.com/3d-models/little-planet-earth-d54bb387f62147dcbf4be0605068b1cc                 |
+| `landscape_of_an_alien_planet_skybox.glb` | 01 · L'Observatoire (Observatory)            | Jungle Jim           | https://sketchfab.com/3d-models/landscape-of-an-alien-planet-skybox-676c023d919344efbfa9876c85db7d11 |
+| `ibizone_basic_setup_vers.02.glb`         | 03 · Le Sanctuaire (Sanctuary)               | Miguelangelo Rosario | https://sketchfab.com/3d-models/ibizone-basic-setup-vers02-484848f1856c46cd942fd5d69489d836          |
+| `magic_book_set.glb`                      | 05 · Le Codex ("the grimoire of algorithms") | evildeer             | https://sketchfab.com/3d-models/magic-book-set-ee1747b4d426446ba5f14bcf2aec8400                      |
+| `cyberpunk_city_-_1.glb`                  | 06 · Mission Control, heavily desaturated    | born2012             | https://sketchfab.com/3d-models/cyberpunk-city-1-14d2eaa145ee42938e004115871adf6c                    |
+| `city_for_my_game.glb`                    | 07 · Le Noyau (the operators' own home base) | abhayexe             | https://sketchfab.com/3d-models/city-for-my-game-27f61ca204944810895609a061b9643f                    |
+| `city_at_night.glb`                       | 08 · L'Avant-Poste (Outpost)                 | Katydid              | https://sketchfab.com/3d-models/city-at-night-45b227092fbe42edad4162d5eff5dc65                       |
 
 Hero (Le Quai) and Contact (Le Signal) intentionally carry no landmark model —
 AURA-1 stands alone at the dock, and the journey's end is deliberately bare,

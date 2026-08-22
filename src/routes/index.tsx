@@ -4,18 +4,37 @@ import { HudNav } from "@/components/hud/HudNav";
 import { OrbitNav } from "@/components/hud/OrbitNav";
 import { ProgressBar } from "@/components/hud/ProgressBar";
 import { Hero } from "@/components/sections/Hero";
-import { Vision } from "@/components/sections/Vision";
-import { Universe } from "@/components/sections/Universe";
-import { Sanctuary } from "@/components/sections/Sanctuary";
-import { Projects } from "@/components/sections/Projects";
-import { Technology } from "@/components/sections/Technology";
-import { Process } from "@/components/sections/Process";
-import { Team } from "@/components/sections/Team";
-import { Timeline } from "@/components/sections/Timeline";
-import { Contact } from "@/components/sections/Contact";
+import { SectionSkeleton } from "@/components/sections/SectionSkeleton";
+import { Suspense, lazy } from "react";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useKeyboardSceneNav } from "@/hooks/useKeyboardSceneNav";
 import { fr } from "@/i18n/locales/fr";
+
+const Vision = lazy(() =>
+  import("@/components/sections/Vision").then((m) => ({ default: m.Vision })),
+);
+const Universe = lazy(() =>
+  import("@/components/sections/Universe").then((m) => ({ default: m.Universe })),
+);
+const Sanctuary = lazy(() =>
+  import("@/components/sections/Sanctuary").then((m) => ({ default: m.Sanctuary })),
+);
+const Projects = lazy(() =>
+  import("@/components/sections/Projects").then((m) => ({ default: m.Projects })),
+);
+const Technology = lazy(() =>
+  import("@/components/sections/Technology").then((m) => ({ default: m.Technology })),
+);
+const Process = lazy(() =>
+  import("@/components/sections/Process").then((m) => ({ default: m.Process })),
+);
+const Team = lazy(() => import("@/components/sections/Team").then((m) => ({ default: m.Team })));
+const Timeline = lazy(() =>
+  import("@/components/sections/Timeline").then((m) => ({ default: m.Timeline })),
+);
+const Contact = lazy(() =>
+  import("@/components/sections/Contact").then((m) => ({ default: m.Contact })),
+);
 
 // Static SSR meta defaults to French (AURA++'s primary audience); the page
 // content itself switches language client-side via LanguageContext.
@@ -50,15 +69,17 @@ function Index() {
       <OrbitNav lenisRef={lenisRef} />
       <main className="pointer-events-none relative z-10">
         <Hero lenisRef={lenisRef} />
-        <Vision />
-        <Universe />
-        <Sanctuary />
-        <Projects />
-        <Technology />
-        <Process />
-        <Team />
-        <Timeline />
-        <Contact />
+        <Suspense fallback={<SectionSkeleton />}>
+          <Vision />
+          <Universe />
+          <Sanctuary />
+          <Projects />
+          <Technology />
+          <Process />
+          <Team />
+          <Timeline />
+          <Contact />
+        </Suspense>
       </main>
     </div>
   );

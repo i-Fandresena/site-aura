@@ -130,16 +130,8 @@
   --glow-cyan: 0 0 10px oklch(0.66 0.121 210 / 0.4);
   --text-glow-signal: 0 0 18px oklch(0.512 0.2734 264.5 / 0.3);
   --text-glow-cyan: 0 0 18px oklch(0.66 0.121 210 / 0.28);
-  --gradient-signal: linear-gradient(
-    120deg,
-    oklch(0.512 0.2734 264.5),
-    oklch(0.66 0.121 210)
-  );
-  --gradient-hud: linear-gradient(
-    180deg,
-    oklch(1 0 0 / 0.75),
-    oklch(1 0 0 / 0.45)
-  );
+  --gradient-signal: linear-gradient(120deg, oklch(0.512 0.2734 264.5), oklch(0.66 0.121 210));
+  --gradient-hud: linear-gradient(180deg, oklch(1 0 0 / 0.75), oklch(1 0 0 / 0.45));
 }
 
 .dark {
@@ -204,16 +196,8 @@
   --glow-cyan: 0 0 10px oklch(0.865 0.1503 199 / 0.35);
   --text-glow-signal: 0 0 16px oklch(0.66 0.24 292 / 0.4);
   --text-glow-cyan: 0 0 16px oklch(0.865 0.1503 199 / 0.35);
-  --gradient-signal: linear-gradient(
-    120deg,
-    oklch(0.66 0.24 292),
-    oklch(0.7 0.18 250)
-  );
-  --gradient-hud: linear-gradient(
-    180deg,
-    oklch(1 0 0 / 0.06),
-    oklch(1 0 0 / 0.01)
-  );
+  --gradient-signal: linear-gradient(120deg, oklch(0.66 0.24 292), oklch(0.7 0.18 250));
+  --gradient-hud: linear-gradient(180deg, oklch(1 0 0 / 0.06), oklch(1 0 0 / 0.01));
 }
 
 @layer base {

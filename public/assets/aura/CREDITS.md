@@ -5,8 +5,8 @@ required, but is recorded so their provenance stays traceable.
 
 ## Models
 
-| File | Source | Author | Licence |
-| --- | --- | --- | --- |
+| File                      | Source                                                                                                | Author                                                                                                              | Licence |
+| ------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------- |
 | `3d/robot-expressive.glb` | [three.js examples](https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf/RobotExpressive) | Tomás Laulhé ([Quaternius](https://www.patreon.com/quaternius)), modified by [Don McCurdy](https://donmccurdy.com/) | CC0 1.0 |
 
 The robot ships with 14 animation clips (`Idle`, `Wave`, `Dance`, `ThumbsUp`,
@@ -15,12 +15,12 @@ The robot ships with 14 animation clips (`Idle`, `Wave`, `Dance`, `ThumbsUp`,
 
 ## Textures
 
-| File | Source | Licence |
-| --- | --- | --- |
-| `textures/earth-day.jpg` | [three.js examples](https://github.com/mrdoob/three.js/tree/dev/examples/textures/planets) — NASA Blue Marble derived | Public domain |
-| `textures/earth-night.jpg` | idem — NASA city-lights composite | Public domain |
-| `textures/earth-normal.jpg` | idem | Public domain |
-| `textures/earth-clouds.png` | idem | Public domain |
+| File                        | Source                                                                                                                | Licence       |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `textures/earth-day.jpg`    | [three.js examples](https://github.com/mrdoob/three.js/tree/dev/examples/textures/planets) — NASA Blue Marble derived | Public domain |
+| `textures/earth-night.jpg`  | idem — NASA city-lights composite                                                                                     | Public domain |
+| `textures/earth-normal.jpg` | idem                                                                                                                  | Public domain |
+| `textures/earth-clouds.png` | idem                                                                                                                  | Public domain |
 
 > Note: `earth-clouds.png` is a palette-indexed PNG whose transparency lives in
 > a `tRNS` chunk. It must be used as `map` (alpha channel), **not** `alphaMap` —
